@@ -1,0 +1,51 @@
+/* basic layout */
+body {
+    min-width: 810px;
+    font: 1em helvetica, sans-serif;
+}
+#siteHeader {
+    padding: 20px 0 20px 300px;
+}
+#sidebar {
+    width: 250px;
+    float: left;
+}
+#contentContainer {
+    margin-left: 300px;
+}
+#contentColumn {
+    width: 500px;
+    overflow: visible;
+    line-height: 1.6;
+    text-align:justify;
+}
+/* site-wide features */
+a {
+    text-decoration: none;
+    color: #5c0c85;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:visited {
+    color: #9b5fba;
+}
+#sideMenu ul {
+    font-size: 1.4em;
+    list-style: none;
+    text-align: right;
+}
+/* headers */
+#siteHeader h1{
+    font-size: 4em;
+    margin: 0;
+}
+h3.blogPostTitle {
+    margin: 1em 0 0 0;
+    font-size: 1.2em;
+}
+/* Blog post */
+.blogPostDate {
+    margin: 0;
+    font-size: .8em;
+}
