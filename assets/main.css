@@ -41,11 +41,44 @@ a:visited {
     margin: 0;
 }
 h3.blogPostTitle {
-    margin: 1em 0 0 0;
-    font-size: 1.2em;
+    margin: .5em 0 0 0;
+    font-size: 2em;
 }
 /* Blog post */
 .blogPostDate {
     margin: 0;
+    font-size: .8em;
+}
+/* Comments */
+#commentForm {
+    margin: 1em 0 0 0;
+    padding: 1em 0 0 0;
+    border: 1px solid;
+    border-color: gray;
+    border-width: 1px 0 0 0;
+}
+.commentsTitle {
+    font-size: 2em;
+    color: #aaa;
+    margin-bottom: 0;
+}
+#commentForm p label {
+    display: block;
+    float: left;
+    text-align: left;
+    width: 7em;
+}
+.comment .name {
+    margin: 0;
+    font-size: 1.5em;
+    color: #bbb;
+}
+.comment .name a.count {
+    color: #999;
+}
+.comment p {
+    margin: 0 0 1em 0;
+}
+.comment .date {
     font-size: .8em;
 }
