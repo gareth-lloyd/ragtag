@@ -17,7 +17,6 @@ body {
     width: 500px;
     overflow: visible;
     line-height: 1.6;
-    text-align:justify;
 }
 /* site-wide features */
 a {
@@ -34,6 +33,14 @@ a:visited {
     font-size: 1.4em;
     list-style: none;
     text-align: right;
+}
+code {
+    white-space: pre;
+}
+pre {
+    display: inline;
+    padding: 0;
+    margin: 0;
 }
 /* headers */
 #siteHeader h1{
