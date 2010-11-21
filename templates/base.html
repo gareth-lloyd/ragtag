@@ -4,7 +4,20 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
   <link type="text/css" rel="stylesheet" href="/assets/main.css" />
+  <link href="/assets/syntax/shCoreDefault.css" rel="stylesheet" type="text/css" />
+
+  <script type="text/javascript" src="/assets/syntax/shCore.js"></script>
+  <script type="text/javascript" src="/assets/syntax/shBrushJava.js"></script>
+  <script type="text/javascript" src="/assets/syntax/shBrushXml.js"></script>
+
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load("jquery", "1");
+    google.setOnLoadCallback(function() {});
+  </script>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
   <title>{% block title %}{% endblock %}</title>
 </head>
 <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">

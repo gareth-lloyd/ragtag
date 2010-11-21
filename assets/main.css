@@ -56,6 +56,9 @@ h3.blogPostTitle {
     margin: 0;
     font-size: .8em;
 }
+.item {
+    margin-bottom: 4em;
+}
 /* Comments */
 #commentForm {
     margin: 1em 0 0 0;
