@@ -43,6 +43,13 @@ pre {
     padding: 0;
     margin: 0;
 }
+/* about box */
+#aboutBox {
+  text-align: right;
+  width: 200px;
+  float: right;
+  margin: 10px 0 0 0;
+}
 /* headers */
 #siteHeader h1{
     font-size: 4em;
