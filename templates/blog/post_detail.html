@@ -2,6 +2,23 @@
 
 {% load i18n %}
 
+{% block css %}
+  <link href="/assets/syntax/shCoreDefault.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block javascript %}
+  <script type="text/javascript" src="/assets/syntax/shCore.js"></script>
+  <script type="text/javascript" src="/assets/syntax/shBrushJava.js"></script>
+  <script type="text/javascript" src="/assets/syntax/shBrushXml.js"></script>
+
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load("jquery", "1");
+    google.setOnLoadCallback(function() {});
+  </script>
+  <script type="text/javascript">SyntaxHighlighter.all();</script>
+{% endblock %}
+
 {% block title %}{{ object.title }}{% endblock %}
 {% block body_class %}{{ block.super }} post_detail{% endblock %}
 {% block body_id %}post_{{ object.id }}{% endblock %}
