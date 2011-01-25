@@ -61,23 +61,35 @@ ADMIN_MEDIA_PREFIX = '/media/'
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '5#de@j=9@-ow=7du)72d$0920(#@w&2%4&-)ux8ukx!4pdka66'
 
+CACHE_BACKEND = 'db://cache_table'
+
+MIDDLEWARE_CLASSES = (
+    'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
+)
+# cache settings
+# only cache for non-logged in user
+CACHE_MIDDLEWARE_ANONYMOUS_ONLY = True
+# The cache alias to use for storage. (accept default value)
+CACHE_MIDDLEWARE_ALIAS = 'cache_alias'
+# The number of seconds each page should be cached.
+CACHE_MIDDLEWARE_SECONDS = 300
+CACHE_MIDDLEWARE_KEY_PREFIX = ''
+
+
+ROOT_URLCONF = 'ragtag.urls'
+
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
-
-MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-)
-
-ROOT_URLCONF = 'ragtag.urls'
-
 TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), 'templates').replace('\\','/'),
 )
