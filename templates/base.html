@@ -11,7 +11,7 @@
 
   {% block javascript %}
   {% endblock %}
-  
+
   <title>{% block title %}{% endblock %}</title>
 </head>
 <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
@@ -29,8 +29,11 @@
             </ul>
         </div>
         <div id="aboutBox">
-          The blog of <a href="http://twitter.com/#!/godawful">Gareth Lloyd</a>, 
+          The blog of <a href="http://twitter.com/#!/godawful">Gareth Lloyd</a>,
           BBC Software Engineer, Android enthusiast and London cyclist.
+        </div>
+        <div id="feeds">
+          <a href="{% url django.contrib.syndication.views.feed 'posts' %}">Latest posts RSS 2.0</a>
         </div>
     {% endblock %}
   </div>

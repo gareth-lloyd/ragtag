@@ -1,3 +1,4 @@
 *.pyc
 *.kpf
 settings_live.py
+jmeter_tests.jmx

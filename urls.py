@@ -1,5 +1,6 @@
 from django.conf.urls.defaults import *
 from basic.blog import views
+from ragtag.feeds import BlogPostsFeed
 import settings
 from django.contrib import admin
 admin.autodiscover()
@@ -19,12 +20,14 @@ urlpatterns += patterns('',
     url(r'^categories/(?P<slug>[-\w]+)/$', view=views.category_detail,
         name='blog_category_detail'
     ),
-    url (r'^categories/$', view=views.category_list, name='blog_category_list'),
+    url(r'^categories/$', view=views.category_list, name='blog_category_list'),
     url(r'^tags/(?P<slug>[-\w]+)/$', view=views.tag_detail,
         name='blog_tag_detail'
     ),
+    url(r'^feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed',
+        {'feed_dict': {'posts' : BlogPostsFeed}}
+    ),
 )
-
 
 # serve static assets using the django's inbuilt method if in debug
 if settings.DEBUG:
