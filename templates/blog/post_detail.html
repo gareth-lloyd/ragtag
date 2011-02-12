@@ -77,7 +77,7 @@
           {% endif %}
           {% trans "says" %}...
         </h5>
-        {{ comment.comment|urlizetrunc:"60"|markdown:"safe" }}
+        {{ comment.comment|striptags|urlizetrunc:"60"|markdown }}
         <p class="date">{% trans "Posted at" %} {{ comment.submit_date|date:"P" }} {% trans "on" %} {{ comment.submit_date|date:"F j, Y" }}</p>
       </div>
       {% endif %}
@@ -86,6 +86,7 @@
   {% endif %}
   {% if object.allow_comments %}
     <div id="commentForm">
+      <p>You can format comments using <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a> syntax.</p>
       {% render_comment_form for object %}
     </div>
   {% else %}

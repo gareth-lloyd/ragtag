@@ -44,6 +44,9 @@ USE_I18N = True
 # calendars according to the current locale
 USE_L10N = True
 
+# we don't mind bad words
+COMMENTS_ALLOW_PROFANITIES=True
+
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = ''
