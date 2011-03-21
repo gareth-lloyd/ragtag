@@ -108,5 +108,6 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'basic.blog',
     'basic.inlines',
-    'tagging'
+    'tagging',
+    'asset_includes'
 )
