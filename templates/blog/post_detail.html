@@ -7,10 +7,9 @@
 {% endblock %}
 
 {% block javascript %}
-  <script type="text/javascript" src="/assets/syntax/shCore.js"></script>
-  <script type="text/javascript" src="/assets/syntax/shBrushJava.js"></script>
-  <script type="text/javascript" src="/assets/syntax/shBrushXml.js"></script>
-  <script type="text/javascript" src="/assets/syntax/shBrushPython.js"></script>
+  {% for asset in object.asset_set.all %}
+  <script type="text/javascript" src="/assets/syntax/{{asset.asset_location}}"></script>
+  {% endfor %}
   <script type="text/javascript" src="http://www.google.com/jsapi"></script>
   <script type="text/javascript">
     google.load("jquery", "1");
