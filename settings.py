@@ -62,7 +62,7 @@ MEDIA_URL = ''
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '5#de@j=9@-ow=7du)72d$0920(#@w&2%4&-)ux8ukx!4pdka66'
+SECRET_KEY = 'replaced in live settings'
 
 CACHE_BACKEND = 'db://cache_table'
 
