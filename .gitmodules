@@ -1,0 +1,3 @@
+[submodule "externals/django-basic-apps"]
+	path = externals/django-basic-apps
+	url = https://github.com/nathanborror/django-basic-apps.git
