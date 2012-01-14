@@ -21,12 +21,3 @@ class PhotoAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 admin.site.register(Photo, PhotoAdmin)
 
-
-class VideoSetAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': ('title',)}
-admin.site.register(VideoSet, VideoSetAdmin)
-
-
-class VideoAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': ('title',)}
-admin.site.register(Video, VideoAdmin)

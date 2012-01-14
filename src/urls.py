@@ -1,6 +1,7 @@
 from django.conf.urls.defaults import *
+from django.conf.urls.static import static
+from django.conf import settings
 from feeds import BlogPostsFeed
-import settings
 from django.contrib import admin
 admin.autodiscover()
 
@@ -12,9 +13,10 @@ urlpatterns = patterns('',
 # blog urls
 urlpatterns += patterns('',
     (r'^', include('blog.urls')),
-    (r'^media/', include('media.urls.photos')),
+    (r'^photos/', include('media.urls.photos')),
     url(r'^feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed',
         {'feed_dict': {'posts' : BlogPostsFeed}}
     ),
 )
 
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

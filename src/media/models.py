@@ -5,7 +5,6 @@ from tagging.fields import TagField
 
 import tagging
 
-
 class AudioSet(models.Model):
     """AudioSet model"""
     title = models.CharField(max_length=255)
@@ -115,45 +114,3 @@ class Photo(models.Model):
     @permalink
     def get_absolute_url(self):
         return ('photo_detail', None, { 'slug': self.slug })
-
-
-class VideoSet(models.Model):
-    """VideoSet model"""
-    title = models.CharField(max_length=255)
-    slug = models.SlugField()
-    description = models.TextField(blank=True)
-    videos = models.ManyToManyField('Video', related_name='video_sets')
-    created = models.DateTimeField(auto_now_add=True)
-    modified = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        db_table = 'media_video_sets'
-
-    def __unicode__(self):
-        return '%s' % self.title
-
-    @permalink
-    def get_absolute_url(self):
-        return ('video_set_detail', None, { 'slug': self.slug })
-
-
-class Video(models.Model):
-    """Video model"""
-    title = models.CharField(max_length=255)
-    slug = models.SlugField()
-    still = models.FileField(upload_to='video_stills', blank=True, help_text='An image that will be used as a thumbnail.')
-    video = models.FilePathField(path=settings.MEDIA_ROOT+'videos/', recursive=True)
-    description = models.TextField(blank=True)
-    tags = TagField()
-    uploaded = models.DateTimeField(auto_now_add=True)
-    modified = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        db_table = 'media_videos'
-
-    def __unicode__(self):
-        return '%s' % self.title
-
-    @permalink
-    def get_absolute_url(self):
-        return ('video_detail', None, { 'slug': self.slug })
