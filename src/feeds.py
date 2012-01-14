@@ -1,5 +1,5 @@
 from django.contrib.syndication.feeds import Feed
-from basic.blog.models import Post
+from blog.models import Post
 
 class BlogPostsFeed(Feed):
     title = 'Ragtag'

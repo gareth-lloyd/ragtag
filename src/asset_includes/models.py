@@ -1,5 +1,5 @@
 from django.db import models
-from basic.blog.models import Post 
+from blog.models import Post 
 
 class Asset(models.Model):
     asset_location = models.TextField(blank=False)

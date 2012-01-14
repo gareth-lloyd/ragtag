@@ -1,4 +1,6 @@
 *.pyc
 *.kpf
+*.swp
 settings_live.py
 jmeter_tests.jmx
+src/uploadedmedia

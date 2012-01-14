@@ -3,7 +3,7 @@ Test of asset include behaviour
 """
 
 from django.test import TestCase
-from basic.blog.models import Post
+from blog.models import Post
 from models import *
 
 class AssetTest(TestCase):
