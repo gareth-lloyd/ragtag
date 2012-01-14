@@ -5,7 +5,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <link type="text/css" rel="stylesheet" href="/assets/main.css" />
+  <link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}main.css" />
   {% block css %}
   {% endblock %}
 
@@ -42,7 +42,7 @@
         </div>
         <div id="aboutBox">
           The blog of <a href="http://twitter.com/#!/godawful">Gareth Lloyd</a>,
-          BBC Software Engineer, Android enthusiast and London cyclist.
+          Software Engineer and London cyclist.
         </div>
         <div id="feeds">
           <a href="{% url django.contrib.syndication.views.feed 'posts' %}">Latest posts RSS 2.0</a>

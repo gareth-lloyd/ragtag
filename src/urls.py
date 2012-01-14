@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 from basic.blog import views
-from ragtag.feeds import BlogPostsFeed
+from feeds import BlogPostsFeed
 import settings
 from django.contrib import admin
 admin.autodiscover()
@@ -29,8 +29,3 @@ urlpatterns += patterns('',
     ),
 )
 
-# serve static assets using the django's inbuilt method if in debug
-if settings.DEBUG:
-    urlpatterns += patterns('',
-        (r'^assets/(?P<path>.*)$', 'django.views.static.serve', {'document_root': '/home/glloyd/projects/ragtag/assets'}),
-    )
