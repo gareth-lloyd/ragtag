@@ -1,7 +1,7 @@
 # Django settings for ragtag project.
 import os
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -55,13 +55,14 @@ MEDIA_ROOT = os.path.join(os.path.dirname(__file__), 'uploadedmedia/').replace('
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = 'media/'
+ADMIN_MEDIA_PREFIX = '/admin/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = os.path.join(os.path.dirname(__file__), 'static/').replace('\\','/')
-STATIC_URL = '/static/'
+STATIC_URL = ''
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -124,9 +125,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
         'django.contrib.auth.context_processors.auth',
         'django.contrib.messages.context_processors.messages',
 )
-TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(__file__), 'templates').replace('\\','/'),
-)
+TEMPLATE_DIRS = ()
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -144,3 +143,4 @@ INSTALLED_APPS = (
     'asset_includes',
     'media',
 )
+from local_settings import *

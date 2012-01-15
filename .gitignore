@@ -4,3 +4,5 @@
 settings_live.py
 jmeter_tests.jmx
 src/uploadedmedia
+src/static
+src/local_settings.py

@@ -3,12 +3,12 @@
 {% load i18n %}
 
 {% block css %}
-  <link href="/assets/syntax/shCoreDefault.css" rel="stylesheet" type="text/css" />
+  <link href="/syntax/shCoreDefault.css" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block javascript %}
   {% for asset in object.asset_set.all %}
-  <script type="text/javascript" src="/assets/syntax/{{asset.asset_location}}"></script>
+  <script type="text/javascript" src="/syntax/{{asset.asset_location}}"></script>
   {% endfor %}
   <script type="text/javascript" src="http://www.google.com/jsapi"></script>
   <script type="text/javascript">
