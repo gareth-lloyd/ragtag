@@ -2,9 +2,11 @@ cd /srv
 git clone git@github.com:gareth-lloyd/ragtag.git
 
 virtualenv --no-site-packages /srv/ragtag-venv
-source /srv/starchart-venv/bin/activate
+source /srv/ragtag-venv/bin/activate
 /srv/ragtag-venv/bin/pip install -r /srv/ragtag/requirements.txt
 
 # install gunicorn process
+sudo cp /srv/ragtag/deploy/files/gunicorn-ragtag /etc/init/
 
-# 
+# setup nginx
+# add deploy/files/nginix_server_segment to /etc/nginx/nginx.conf
