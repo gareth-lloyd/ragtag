@@ -10,3 +10,6 @@ sudo cp /srv/ragtag/deploy/files/gunicorn-ragtag /etc/init/
 
 # setup nginx
 # add deploy/files/nginix_server_segment to /etc/nginx/nginx.conf
+
+mysql -uroot -p
+CREATE DATABASE ragtag;

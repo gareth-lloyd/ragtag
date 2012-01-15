@@ -1,7 +1,11 @@
+    upstream ragtag {
+        server localhost:8001 fail_timeout=0;
+    }
+
     server {
-        listen 80 default;
+        listen 80;
         client_max_body_size 4G;
-        server_name www.ragtag.info;
+        server_name ragtag.info *.ragtag.info;
 
         keepalive_timeout 5;
 
@@ -18,7 +22,7 @@
             proxy_set_header Host $http_host;
             proxy_redirect off;
 
-            proxy_pass   http://app_server;
+            proxy_pass   http://ragtag;
         }
 
         error_page 500 502 503 504 /500.html;
