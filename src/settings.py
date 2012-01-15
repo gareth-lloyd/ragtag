@@ -49,12 +49,12 @@ COMMENTS_ALLOW_PROFANITIES=True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = os.path.join(os.path.dirname(__file__), 'uploadedmedia/').replace('\\','/')
+MEDIA_ROOT = os.path.join(os.path.dirname(__file__), 'static', 'uploadedmedia').replace('\\','/')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = 'media/'
+MEDIA_URL = '/uploadedmedia/'
 ADMIN_MEDIA_PREFIX = '/admin/'
 
 # Absolute path to the directory static files should be collected to.
