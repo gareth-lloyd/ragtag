@@ -1,7 +1,5 @@
 django
-./externals/django-basic-apps
 mysql-python
-south
 gunicorn
 django-tagging
 python-memcached
