@@ -1,7 +1,1 @@
-django
-mysql-python
-gunicorn
-django-tagging
-python-memcached
-BeautifulSoup
-django-markdown
+django-cms==3.0.2
